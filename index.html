@@ -1,0 +1,105 @@
+<html>
+<head>
+  <title>Magic Bookmarks (by The Develop Guy)</title>
+  <link rel='preconnect' href='https://fonts.googleapis.com'>
+  <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+  <link href='https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap'
+        rel='stylesheet'>
+  <style>
+      * {
+          box-sizing: border-box;
+          font-family: 'Roboto';
+      }
+
+      .Head {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 200px;
+          margin-bottom: 20px;
+      }
+
+      .Head .Title {
+          font-size: 28px;
+          margin-bottom: 8px;
+          width: 60vw;
+      }
+
+      .Credit {
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+          width: 100%;
+          font-size: 16px;
+          color: #656565;
+          flex: 1;
+      }
+
+      .Main {
+          max-width: 60vw;
+          margin: 0 auto;
+      }
+
+      .Block {
+          display: flex;
+          flex-direction: column;
+          background-color: #f4f4f4;
+          padding: 12px;
+          margin-bottom: 12px;
+          border-radius: 4px;
+          border: 1px solid #ddd;
+      }
+
+      .Explainer {
+          margin-top: 8px;
+          color: #656565;
+      }
+
+  </style>
+</head>
+<body>
+<div class='Main'>
+  <div class='Head'>
+    <div class='Title'><marquee>Magic Bookmarks!</marquee></div>
+  </div>
+  <!--Copy Branch-->
+  <div class='Block'>
+    <a href='javascript:
+function func(){
+  const elems = document.querySelectorAll(`[aria-label="Copyable input"]`);
+  navigator.clipboard.writeText(`git fetch && ${elems[0]?.value}`)
+};
+func();
+  '>Copy Branch</a>
+    <div class='Explainer'>Copy bitbucket branch in the format of "git fetch && ..."</div>
+  </div>
+  <!--Show Passwords-->
+  <div class='Block'>
+    <a href='javascript:
+function func(){
+  [].slice.call(document.getElementsByTagName("input"))
+  .filter(e => e.type.toLowerCase() === "password")
+  .forEach(e => e.type = "text");
+};
+func();
+'>Show Passwords</a>
+    <div class='Explainer'>Shows password input as text, like <input type='password' value='mypassword' /></div>
+  </div>
+  <!--Remove mouse following red line from HotJar-->
+  <div class='Block'>
+    <a href='javascript:
+function func(){
+  const elem = document.getElementById("svg-actions-container");
+  elem.remove();
+};
+func();
+'>HotJar | Remove mouse tracking from video</a>
+    <div class='Explainer'>Remove the annoying red line following the cursor in HotJar system</div>
+  </div>
+  <div class='Credit'>
+    <div>By <a href='https://github.com/TheDevelopGuy' target='_blank'>TheDevelopGuy</a></div>
+  </div>
+</div>
+</body>
+</html>
